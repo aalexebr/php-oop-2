@@ -12,4 +12,9 @@ class Category {
         $this->id = $id;
         $this->name = $name;
     }
+    // public function printCategory(){
+    //     if($this->id = 1){
+    //         echo ''
+    //     }
+    // }
 }

@@ -28,7 +28,15 @@ class Food extends Product{
 };
 
 class Toy extends Product{
-
+    public function __construct(
+        Category $category,
+        string $name,
+        float $price,
+        string $description,
+    )
+    {
+        parent::__construct($category,$name,$price,$description);
+    }
 };
 
 class Bed extends Product{
