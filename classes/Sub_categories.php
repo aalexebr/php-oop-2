@@ -3,6 +3,7 @@ require_once __DIR__.'/./Product.php';
 require_once __DIR__.'/./Category.php';
 
 class Food extends Product{
+    public $type = 'Food';
     public $expiration;
     public $weight;
     public $refrigerated;
@@ -28,6 +29,7 @@ class Food extends Product{
 };
 
 class Toy extends Product{
+    public $type = 'Toy';
     public function __construct(
         Category $category,
         string $name,
@@ -40,6 +42,7 @@ class Toy extends Product{
 };
 
 class Bed extends Product{
+    public $type = 'Bed';
     public $dimensions;
     public $materials;
 
