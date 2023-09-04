@@ -9,17 +9,17 @@ class Food extends Product{
     public $ingredients;
 
     public function __construct(
+        Category $category,
         string $name,
         float $price,
         string $description,
-        Category $category,
         $expiration,
         string $ingredients,
         float $weight = null,
         bool $refrigerated = false,
     )
     {
-        parent::__construct($name,$price,$description,$category);
+        parent::__construct($category,$name,$price,$description,);
         $this->expiration = $expiration;
         $this->weight = $weight;
         $this->refrigerated = $expiration;
@@ -36,10 +36,16 @@ class Bed extends Product{
     public $materials;
 
     public function __construct(
+        Category $category,
+        string $name,
+        float $price,
+        string $description,
+        
         $dimensions,
-        $materials
+        $materials = null
     )
     {
+        parent::__construct($category,$name,$price,$description);
         $this->dimensions = $dimensions;
         $this->materials = $materials;
     }

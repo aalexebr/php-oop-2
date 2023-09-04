@@ -12,10 +12,10 @@ class Product {
     
 
     public function __construct(
+        Category $category,
         string $name,
         float $price,
         string $description,
-        Category $category,
     )
     {
         $this->name = $name;
