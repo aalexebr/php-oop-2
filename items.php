@@ -17,6 +17,7 @@ $item2 = new Food(new Category(2,'cat'),'Happy Meal',14.99,'amazing for cats','2
 
 $item3 = new Toy(new Category(1,'dog'),'bone',10.50,'for teeth');
 // var_dump($item3);
+echo $item3::$type;
 
 array_push($allProducts,$item1,$item2,$item3);
 var_dump($allProducts);

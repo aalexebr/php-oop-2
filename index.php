@@ -52,18 +52,18 @@ require_once __DIR__.'./items.php';
                                         echo $product->description;
                                     ?>
                                 </p>
-                                <h4>
-                                    <?php
-                                        echo $product->price;
-                                    ?>
-                                </h4>
                                 <span>
                                     <?php
-                                        if($product->type <> null){
-                                            echo 'type: '.$product->type;
+                                        if($product::$type <> null){
+                                            echo 'type: '.$product::$type;
                                         }
                                     ?>
                                 </span>
+                                <h4>
+                                    <?php
+                                        echo $product->price.'$';
+                                    ?>
+                                </h4>
                             </div>
                         </div>
                     </div>
