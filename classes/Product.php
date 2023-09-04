@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__.'/./Category.php';
+require_once __DIR__.'/./Sub_categories.php';
+
 
 class Product {
     protected $id;
@@ -20,5 +22,9 @@ class Product {
         $this->price = $price;
         $this->description = $description;
         $this->category = $category;
+    }
+
+    public function getCategory(){
+       return $this->category->name;
     }
 };
