@@ -14,7 +14,6 @@ class Bed extends Product{
         string $name,
         float $price,
         string $description,
-        
         $dimentions,
         $materials = null
     )
