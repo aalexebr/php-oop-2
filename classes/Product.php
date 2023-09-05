@@ -25,7 +25,7 @@ class Product {
         $this->price = $price;
         
         $this->category = $category;
-        if(preg_match('/^[A-Za-z ]+$/', $description)){
+        if(preg_match("#^[a-zA-Z0-9äöüÄÖÜ ]+$#", $description)){
            $this->description = $description; 
         }
         else{

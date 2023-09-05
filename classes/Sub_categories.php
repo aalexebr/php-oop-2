@@ -22,7 +22,7 @@ class Food extends Product{
     )
     {
         parent::__construct($category,$name,$price,$description,);
-        $this->expiration = $expiration;
+        // $this->expiration = $expiration;
        
         $this->refrigerated = $expiration;
         $this->ingredients = $ingredients;
@@ -32,6 +32,12 @@ class Food extends Product{
         else{
             throw new Exception('Incorrect Numeric Value for weight');
         }
+        if(!preg_match('/[a-zA-Z]/', $expiration)){
+            $this->expiration = $expiration; 
+         }
+         else{
+             throw new Exception('Incorrect Value for expitation date');
+         }
     }
 };
 
