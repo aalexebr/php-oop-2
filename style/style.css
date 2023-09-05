@@ -19,8 +19,8 @@
 }
 .col{
     width: calc(100% / 3);
-    border: 1px solid blue;
-    background-color: lightcoral;
+    /* border: 1px solid blue;
+    background-color: lightcoral; */
     padding: 5px;
 }
 .card{
@@ -28,6 +28,7 @@
     background-color: lightgrey;
     padding: 5px;
     border: 5px solid rgba(2, 2, 2, 0.381);
+    height: 100%;
 }
 .text-center{
    text-align: center; 
@@ -40,4 +41,8 @@
 }
 ul{
     margin-left: 10px;
+}
+
+header{
+    margin: 20px;
 }

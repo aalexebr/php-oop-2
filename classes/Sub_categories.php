@@ -22,8 +22,6 @@ class Food extends Product{
     )
     {
         parent::__construct($category,$name,$price,$description,);
-        // $this->expiration = $expiration;
-       
         $this->refrigerated = $expiration;
         $this->ingredients = $ingredients;
         if(is_numeric($weight) && $weight > 0){
@@ -34,10 +32,10 @@ class Food extends Product{
         }
         if(!preg_match('/[a-zA-Z]/', $expiration)){
             $this->expiration = $expiration; 
-         }
-         else{
+        }
+        else{
              throw new Exception('Incorrect Value for expitation date');
-         }
+        }
     }
 };
 
@@ -56,7 +54,7 @@ class Toy extends Product{
 
 class Bed extends Product{
     public static $type = 'Bed';
-    public $dimensions;
+    public $dimentions;
     public $materials;
 
     public function __construct(
@@ -65,12 +63,17 @@ class Bed extends Product{
         float $price,
         string $description,
         
-        $dimensions,
+        $dimentions,
         $materials = null
     )
     {
         parent::__construct($category,$name,$price,$description);
-        $this->dimensions = $dimensions;
         $this->materials = $materials;
+        if(preg_match('/[0-9]/', $dimentions)){
+            $this->dimentions = $dimentions;
+        }
+        else{
+             throw new Exception('Incorrect Value for expitation dimentions');
+        }
     }
 }

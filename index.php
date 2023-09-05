@@ -19,8 +19,13 @@ require_once __DIR__.'//traits/Trait.php';
     <title>PHP OOP 2</title>
 </head>
 <body>
-    <header>
-
+    <header class="text-center">
+        <h1>
+            PHP OOP 2
+        </h1>
+        <h2>
+            Product Cards
+        </h2>
     </header>
     <main>
         <div class="container">
@@ -31,7 +36,7 @@ require_once __DIR__.'//traits/Trait.php';
                         <div class="card">
                             <div>
                                 <span class="capitalize">
-                                    category : <?php 
+                                    <?php 
                                         // if($product->category->id == 1){
                                         //     echo '<i class="fa-solid fa-dog"></i>';
                                         // }
@@ -75,6 +80,16 @@ require_once __DIR__.'//traits/Trait.php';
                                         </li>
                                         <li>
                                             ingredients: <?php echo $product->ingredients ?>
+                                        </li>
+                                    </ul>
+                                <?php } ?>
+                                <?php if(get_class($product) == 'Bed'){ ?>
+                                    <ul>
+                                        <li>
+                                            dimentions: <?php echo $product->dimentions ?>
+                                        </li>
+                                        <li>
+                                            materials: <?php echo $product->materials ?>
                                         </li>
                                     </ul>
                                 <?php } ?>

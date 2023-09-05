@@ -18,8 +18,10 @@ try{
     $allProducts =[$item1,$item2,$item3];
     $item4 = new Food($categoryCat,'catfood',9.99,'best for cats','11/24','fish',100);
     $allProducts =[$item1,$item2,$item3,$item4];
-    $item5 = new Food($categoryDog,'dogfood',15.99,'the best food for dogs ever 007','11/23n','meat',15.5);
+    $item5 = new Food($categoryDog,'dogfood',15.99,'the best food for dogs ever','11/23','meat',15.5);
     $allProducts =[$item1,$item2,$item3,$item4,$item5];
+    $item6 = new Bed($categoryDog,'dogbed7000',199.99,'the greatest sleeping place of all time','20x20','cotton and linen');
+    $allProducts =[$item1,$item2,$item3,$item4,$item5,$item6];
     // array_push($allProducts,$item1,$item2,$item3, $item4, $item5);
 }
 catch(Exception $e){
@@ -32,4 +34,4 @@ catch(Exception $e){
 // $item4 = new Food($categoryCat,'catfood',9.99,'best for cats','11/24','fish',100);
 // $item5 = new Food($categoryDog,'dogfood',15.99,'deliscious','11/23','meat',15.5);
 // array_push($allProducts,$item1,$item2,$item3, $item4, $item5);
-var_dump($allProducts);
+// var_dump($allProducts);
