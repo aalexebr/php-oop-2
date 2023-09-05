@@ -1,9 +1,11 @@
 <?php
 require_once __DIR__.'./classes/Category.php';
 require_once __DIR__.'./classes/Product.php';
-require_once __DIR__.'./classes/Sub_categories.php';
-require_once __DIR__.'./items.php';
+require_once __DIR__.'./classes/Bed.php';
+require_once __DIR__.'./db.php';
 require_once __DIR__.'//traits/Trait.php';
+require_once __DIR__.'./classes/Toy.php';
+require_once __DIR__.'./classes/Food.php';
 
 
 ?>

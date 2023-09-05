@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__.'/../traits/Trait.php';
 require_once __DIR__.'/./Category.php';
-require_once __DIR__.'/./Sub_categories.php';
 
 
 
