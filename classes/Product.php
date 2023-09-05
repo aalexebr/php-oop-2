@@ -6,9 +6,9 @@ require_once __DIR__.'/./Sub_categories.php';
 
 
 class Product {
-    // protected $id;
-    // public $name;
-    use Id;
+    protected $id;
+    public $name;
+    // use Id;
     public $price;
     public $description;
     public $category;
@@ -23,8 +23,15 @@ class Product {
     {
         $this->name = $name;
         $this->price = $price;
-        $this->description = $description;
+        
         $this->category = $category;
+        if(preg_match('/^[A-Za-z ]+$/', $description)){
+           $this->description = $description; 
+        }
+        else{
+            throw new Exception('Incorrect Value for description');
+        }
+
     }
 
     public function getCategory(){

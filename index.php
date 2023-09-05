@@ -4,6 +4,8 @@ require_once __DIR__.'./classes/Product.php';
 require_once __DIR__.'./classes/Sub_categories.php';
 require_once __DIR__.'./items.php';
 require_once __DIR__.'//traits/Trait.php';
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,10 +71,10 @@ require_once __DIR__.'//traits/Trait.php';
                                 <?php if(get_class($product) == 'Food'){ ?>
                                     <ul>
                                         <li>
-                                            <?php echo $product->expiration ?>
+                                            expiration: <?php echo $product->expiration ?>
                                         </li>
                                         <li>
-                                            <?php echo $product->ingredients ?>
+                                            ingredients: <?php echo $product->ingredients ?>
                                         </li>
                                     </ul>
                                 <?php } ?>

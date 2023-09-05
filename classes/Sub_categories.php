@@ -1,8 +1,7 @@
 <?php
-require_once __DIR__.'/../traits/Trait.php';
+// require_once __DIR__.'/../traits/Trait.php';
 require_once __DIR__.'/./Product.php';
 require_once __DIR__.'/./Category.php';
-// require_once __DIR__.'/../traits/Trait.php';
 
 class Food extends Product{
     // public static $type = 'Food';
@@ -24,9 +23,15 @@ class Food extends Product{
     {
         parent::__construct($category,$name,$price,$description,);
         $this->expiration = $expiration;
-        $this->weight = $weight;
+       
         $this->refrigerated = $expiration;
         $this->ingredients = $ingredients;
+        if(is_numeric($weight) && $weight > 0){
+             $this->weight = $weight;
+        }
+        else{
+            throw new Exception('Incorrect Numeric Value for weight');
+        }
     }
 };
 
