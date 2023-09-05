@@ -3,6 +3,7 @@ require_once __DIR__.'./classes/Category.php';
 require_once __DIR__.'./classes/Product.php';
 require_once __DIR__.'./classes/Sub_categories.php';
 require_once __DIR__.'./items.php';
+require_once __DIR__.'//traits/Trait.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,18 +54,28 @@ require_once __DIR__.'./items.php';
                                         echo $product->description;
                                     ?>
                                 </p>
-                                <span>
+                                <!-- <span>
                                     <?php
-                                        if($product::$type <> null){
-                                            echo 'type: '.$product::$type;
-                                        }
+                                        // if($product::$type <> null){
+                                        //     echo 'type: '.$product::$type;
+                                        // }
                                     ?>
-                                </span>
+                                </span> -->
                                 <h4>
                                     <?php
                                         echo $product->price.'$';
                                     ?>
                                 </h4>
+                                <?php if(get_class($product) == 'Food'){ ?>
+                                    <ul>
+                                        <li>
+                                            <?php echo $product->expiration ?>
+                                        </li>
+                                        <li>
+                                            <?php echo $product->ingredients ?>
+                                        </li>
+                                    </ul>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

@@ -1,11 +1,14 @@
 <?php
+require_once __DIR__.'/../traits/Trait.php';
 require_once __DIR__.'/./Category.php';
 require_once __DIR__.'/./Sub_categories.php';
 
 
+
 class Product {
-    protected $id;
-    public $name;
+    // protected $id;
+    // public $name;
+    use Id;
     public $price;
     public $description;
     public $category;

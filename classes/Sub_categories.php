@@ -1,9 +1,11 @@
 <?php
+require_once __DIR__.'/../traits/Trait.php';
 require_once __DIR__.'/./Product.php';
 require_once __DIR__.'/./Category.php';
+// require_once __DIR__.'/../traits/Trait.php';
 
 class Food extends Product{
-    public static $type = 'Food';
+    // public static $type = 'Food';
     public $expiration;
     public $weight;
     public $refrigerated;

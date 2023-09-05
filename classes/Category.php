@@ -1,8 +1,9 @@
 <?php
-
+require_once __DIR__.'/../traits/Trait.php';
 class Category {
-    public $id;
-    public $name;
+    // protected $id;
+    // public $name;
+    use Id;
     public $icon;
 
     public function __construct(
@@ -38,3 +39,6 @@ class Category {
         }
     }
 }
+
+$categoryDog = new Category(1,'dog');
+$categoryCat = new Category(2,'cat');

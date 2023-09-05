@@ -27,6 +27,7 @@
     border-radius: 10px;
     background-color: lightgrey;
     padding: 5px;
+    border: 5px solid rgba(2, 2, 2, 0.381);
 }
 .text-center{
    text-align: center; 
@@ -36,4 +37,7 @@
 }
 .justify-center{
     justify-content: center;
+}
+ul{
+    margin-left: 10px;
 }
