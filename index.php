@@ -21,7 +21,7 @@ require_once __DIR__.'./items.php';
     </header>
     <main>
         <div class="container">
-            <div class="row wrap justify-center">
+            <div class="row wrap ">
                 <?php foreach($allProducts as $index => $product){
                 ?>
                     <div class="col">
@@ -29,13 +29,14 @@ require_once __DIR__.'./items.php';
                             <div>
                                 <span class="capitalize">
                                     category : <?php 
-                                        if($product->category->id == 1){
-                                            echo '<i class="fa-solid fa-dog"></i>';
-                                        }
-                                        elseif($product->category->id == 2){
-                                            echo '<i class="fa-solid fa-cat"></i>';
-                                        }
+                                        // if($product->category->id == 1){
+                                        //     echo '<i class="fa-solid fa-dog"></i>';
+                                        // }
+                                        // elseif($product->category->id == 2){
+                                        //     echo '<i class="fa-solid fa-cat"></i>';
+                                        // }
                                         // echo $product->category->name;
+                                        echo $product->category->icon;
                                     ?>
                                 </span>
                             </div>
